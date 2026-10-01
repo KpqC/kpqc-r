@@ -1,0 +1,24 @@
+Package: kpqc
+Type: Package
+Title: Korean Post-Quantum Cryptography Algorithms
+Version: 0.1.0
+Authors@R: c(
+    person("osuolfou", email = "osuolfou@naver.com", role = c("aut", "cre")),
+    person("SAMSUNG SDS", role = c("ctb", "cph")),
+    person("Team HAETAE", role = c("ctb", "cph")),
+    person("NTRU+ TEAM", role = c("ctb", "cph")),
+    person("Team SMAUG-T", role = c("ctb", "cph")),
+    person("Thomas", "Pornin", role = c("ctb", "cph"))
+  )
+Description: Synchronous interfaces to the AIMer and HAETAE signature
+    schemes and the NTRU+ and SMAUG-T key-encapsulation mechanisms selected
+    by the Korean Post-Quantum Cryptography competition. Native reference
+    implementations are compiled into the package and use operating-system
+    entropy for key generation, signing, and encapsulation.
+License: MIT + file LICENSE
+URL: https://github.com/KpqC/kpqc-r
+BugReports: https://github.com/KpqC/kpqc-r/issues
+Depends: R (>= 3.6.0)
+Encoding: UTF-8
+SystemRequirements: C11
+NeedsCompilation: yes

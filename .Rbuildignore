@@ -1,0 +1,8 @@
+^\.git$
+^\.github$
+^\.gitignore$
+^LICENSE\.md$
+^THIRD_PARTY_NOTICES\.md$
+^kpqc_[0-9].*\.tar\.gz$
+^kpqc\.Rcheck$
+^kpqc-test-vectors$

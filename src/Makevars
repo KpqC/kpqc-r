@@ -1,0 +1,30 @@
+C_STD = C11
+PKG_CPPFLAGS = $(KPQC_CPPFLAGS)
+PKG_CFLAGS = $(C_VISIBILITY)
+PKG_LIBS = -lm
+
+HAETAE_CPPFLAGS = -Ithird_party/HAETAE/include
+SMAUGT_CPPFLAGS = -Ithird_party/SMAUG-T/include
+
+all: $(SHLIB)
+
+core_haetae2.o: core_haetae2.c
+	$(CC) $(ALL_CPPFLAGS) $(HAETAE_CPPFLAGS) $(ALL_CFLAGS) -c core_haetae2.c -o core_haetae2.o
+
+core_haetae3.o: core_haetae3.c
+	$(CC) $(ALL_CPPFLAGS) $(HAETAE_CPPFLAGS) $(ALL_CFLAGS) -c core_haetae3.c -o core_haetae3.o
+
+core_haetae5.o: core_haetae5.c
+	$(CC) $(ALL_CPPFLAGS) $(HAETAE_CPPFLAGS) $(ALL_CFLAGS) -c core_haetae5.c -o core_haetae5.o
+
+core_smaugt128.o: core_smaugt128.c
+	$(CC) $(ALL_CPPFLAGS) $(SMAUGT_CPPFLAGS) $(ALL_CFLAGS) -c core_smaugt128.c -o core_smaugt128.o
+
+core_smaugt192.o: core_smaugt192.c
+	$(CC) $(ALL_CPPFLAGS) $(SMAUGT_CPPFLAGS) $(ALL_CFLAGS) -c core_smaugt192.c -o core_smaugt192.o
+
+core_smaugt256.o: core_smaugt256.c
+	$(CC) $(ALL_CPPFLAGS) $(SMAUGT_CPPFLAGS) $(ALL_CFLAGS) -c core_smaugt256.c -o core_smaugt256.o
+
+core_timer.o: core_timer.c
+	$(CC) $(ALL_CPPFLAGS) $(SMAUGT_CPPFLAGS) $(ALL_CFLAGS) -c core_timer.c -o core_timer.o

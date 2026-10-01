@@ -1,0 +1,10 @@
+*.Rcheck/
+*.tar.gz
+kpqc-test-vectors/
+src/*.dll
+src/*.o
+src/*.so
+src/*.dylib
+src/symbols.rds
+.Rhistory
+.Rproj.user/
