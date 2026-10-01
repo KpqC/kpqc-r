@@ -10,7 +10,14 @@ KpqC provides synchronous R APIs for AIMer, HAETAE, NTRU+, and SMAUG-T.
 
 ## Install
 
-From the repository root:
+From GitHub:
+
+```r
+install.packages("remotes")
+remotes::install_github("KpqC/kpqc-r@v0.1.0")
+```
+
+From a source checkout:
 
 ```sh
 R CMD INSTALL .
