@@ -1,6 +1,7 @@
 # KpqC
 
-KpqC provides synchronous R APIs for AIMer, HAETAE, NTRU+, and SMAUG-T.
+KpqC provides synchronous R APIs for the AIMer and HAETAE signature schemes
+and the NTRU+ and SMAUG-T key encapsulation mechanisms (KEMs).
 
 ## Runtime support
 
@@ -35,8 +36,8 @@ install.packages("kpqc")
 | --- | --- | --- |
 | **AIMer** | Signature | `aimer128f()`, `aimer128s()`, `aimer192f()`, `aimer192s()`, `aimer256f()`, `aimer256s()` |
 | **HAETAE** | Signature | `haetae2()`, `haetae3()`, `haetae5()` |
-| **NTRU+** | Key encapsulation | `ntruplus768()`, `ntruplus864()`, `ntruplus1152()` |
-| **SMAUG&#8209;T** | Key encapsulation | `smaugt128()`, `smaugt192()`, `smaugt256()`, `timer()` |
+| **NTRU+** | KEM | `ntruplus768()`, `ntruplus864()`, `ntruplus1152()` |
+| **SMAUG&#8209;T** | KEM | `smaugt128()`, `smaugt192()`, `smaugt256()`, `timer()` |
 
 ### Parameter sizes
 
@@ -85,7 +86,10 @@ stopifnot(valid)
 of at most 255 bytes. Verification fails when the supplied context does not
 match the one used for signing.
 
-### Key encapsulation
+### KEM
+
+A KEM creates a shared secret for a sender and a recipient. The public key may
+be distributed; the secret key and resulting shared secret must remain private.
 
 ```r
 algorithm <- smaugt192()

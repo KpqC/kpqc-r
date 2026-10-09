@@ -44,7 +44,7 @@ Construct algorithm descriptors for every supported KpqC parameter set.
 \value{
 An accessor returns a \code{kpqc_algorithm} object containing the algorithm
 identifier, type, and byte sizes. The collection functions return lists of
-all signature or key-encapsulation algorithms.
+all signature or KEM algorithms.
 }
 \examples{
 algorithm <- aimer128f()

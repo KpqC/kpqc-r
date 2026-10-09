@@ -33,7 +33,7 @@ decapsulate_secret(algorithm, ciphertext, secret_key)
 }
 \description{
 Generate key pairs, create and verify detached signatures, and establish
-shared secrets using key encapsulation.
+shared secrets using a key encapsulation mechanism (KEM).
 }
 \value{
 \code{generate_key_pair()} returns a list with \code{public_key} and

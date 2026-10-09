@@ -336,7 +336,7 @@ SEXP kpqc_encapsulate(SEXP algorithm_value, SEXP public_key) {
     const char *id = algorithm_id(algorithm_value);
     const kem_algorithm *algorithm = find_kem(id);
     if (algorithm == NULL) {
-        Rf_error("algorithm does not support key encapsulation: %s", id);
+        Rf_error("algorithm does not support KEM operations: %s", id);
     }
     require_size(public_key, algorithm->public_key_size, "public_key");
 
@@ -363,7 +363,7 @@ SEXP kpqc_decapsulate(SEXP algorithm_value, SEXP ciphertext, SEXP secret_key) {
     const char *id = algorithm_id(algorithm_value);
     const kem_algorithm *algorithm = find_kem(id);
     if (algorithm == NULL) {
-        Rf_error("algorithm does not support key encapsulation: %s", id);
+        Rf_error("algorithm does not support KEM operations: %s", id);
     }
     require_size(ciphertext, algorithm->ciphertext_size, "ciphertext");
     require_size(secret_key, algorithm->secret_key_size, "secret_key");

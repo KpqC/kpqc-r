@@ -4,7 +4,7 @@
 \title{Korean Post-Quantum Cryptography Algorithms}
 \description{
 Synchronous R interfaces to AIMer and HAETAE signatures and NTRU+ and SMAUG-T
-key-encapsulation mechanisms.
+key encapsulation mechanisms (KEMs).
 }
 \details{
 Binary values are represented as raw vectors. Use \code{charToRaw()} when a
