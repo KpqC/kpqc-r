@@ -127,7 +127,7 @@ provide a constant-time execution guarantee. Assess those constraints before
 using it with sensitive production keys.
 
 Third-party licenses and attributions are listed in
-[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+[THIRD_PARTY_NOTICES.md](https://github.com/KpqC/kpqc-r/blob/main/THIRD_PARTY_NOTICES.md).
 
 ## Known-answer tests
 
