@@ -133,12 +133,12 @@ Third-party licenses and attributions are listed in
 
 The test suite validates 100 vectors for each of the 16 parameter sets (1,600
 vectors total) from
-[`kpqc-test-vectors`](https://github.com/KpqC/kpqc-test-vectors/tree/179dcc05ece2e22262cea1a61f3cdf1a5b08a304).
+[KpqC/kpqc-test-vectors at commit d75490bf824f](https://github.com/KpqC/kpqc-test-vectors/tree/d75490bf824faa4b148cd0b901a2eb13198fe0da).
 
 ```sh
 R CMD build .
 KPQC_CPPFLAGS=-DKPQC_TEST_ENTROPY \
-  KPQC_TEST_VECTORS=../kpqc-test-vectors \
+  KPQC_TEST_VECTORS="$(pwd)/../kpqc-test-vectors" \
   R CMD check --no-manual kpqc_0.1.0.tar.gz
 ```
 
