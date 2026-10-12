@@ -42,34 +42,6 @@ install.packages("kpqc")
 | **NTRU+** | KEM | `ntruplus768()`, `ntruplus864()`, `ntruplus1152()` |
 | **SMAUG&#8209;T** | KEM | `smaugt128()`, `smaugt192()`, `smaugt256()`, `timer()` |
 
-### Parameter sizes
-
-Signature sizes are shown in bytes.
-
-| Scheme | Public key | Secret key | Signature |
-| --- | ---: | ---: | ---: |
-| AIMer-128f | 32 | 48 | 6,944 |
-| AIMer-128s | 32 | 48 | 4,704 |
-| AIMer-192f | 48 | 72 | 15,408 |
-| AIMer-192s | 48 | 72 | 10,320 |
-| AIMer-256f | 64 | 96 | 31,360 |
-| AIMer-256s | 64 | 96 | 20,224 |
-| HAETAE-2 | 992 | 1,408 | 1,474 |
-| HAETAE-3 | 1,472 | 2,112 | 2,349 |
-| HAETAE-5 | 2,080 | 2,752 | 2,948 |
-
-KEM sizes are shown in bytes.
-
-| Scheme | Public key | Secret key | Ciphertext | Shared secret |
-| --- | ---: | ---: | ---: | ---: |
-| NTRU+ 768 | 1,152 | 2,336 | 1,152 | 32 |
-| NTRU+ 864 | 1,296 | 2,624 | 1,296 | 32 |
-| NTRU+ 1152 | 1,728 | 3,488 | 1,728 | 32 |
-| SMAUG-T 128 | 672 | 832 | 672 | 32 |
-| SMAUG-T 192 | 1,088 | 1,312 | 992 | 32 |
-| SMAUG-T 256 | 1,440 | 1,728 | 1,376 | 32 |
-| TiMER | 672 | 832 | 608 | 32 |
-
 ### Signatures
 
 ```r
@@ -122,15 +94,33 @@ shared secret rather than the sender's shared secret.
 The native algorithm sources are included under `src/third_party/` and compile
 with the package. Installation does not download native libraries.
 
-## Security
+### Parameter sizes
 
-The native cores are compiled from the upstream algorithm implementations.
-This package has not received an independent security audit and does not
-provide a constant-time execution guarantee. Assess those constraints before
-using it with sensitive production keys.
+Signature sizes are shown in bytes.
 
-Third-party licenses and attributions are listed in
-[THIRD_PARTY_NOTICES.md](https://github.com/KpqC/kpqc-r/blob/main/THIRD_PARTY_NOTICES.md).
+| Scheme | Public key | Secret key | Signature |
+| --- | ---: | ---: | ---: |
+| AIMer-128f | 32 | 48 | 6,944 |
+| AIMer-128s | 32 | 48 | 4,704 |
+| AIMer-192f | 48 | 72 | 15,408 |
+| AIMer-192s | 48 | 72 | 10,320 |
+| AIMer-256f | 64 | 96 | 31,360 |
+| AIMer-256s | 64 | 96 | 20,224 |
+| HAETAE-2 | 992 | 1,408 | 1,474 |
+| HAETAE-3 | 1,472 | 2,112 | 2,349 |
+| HAETAE-5 | 2,080 | 2,752 | 2,948 |
+
+KEM sizes are shown in bytes.
+
+| Scheme | Public key | Secret key | Ciphertext | Shared secret |
+| --- | ---: | ---: | ---: | ---: |
+| NTRU+ 768 | 1,152 | 2,336 | 1,152 | 32 |
+| NTRU+ 864 | 1,296 | 2,624 | 1,296 | 32 |
+| NTRU+ 1152 | 1,728 | 3,488 | 1,728 | 32 |
+| SMAUG-T 128 | 672 | 832 | 672 | 32 |
+| SMAUG-T 192 | 1,088 | 1,312 | 992 | 32 |
+| SMAUG-T 256 | 1,440 | 1,728 | 1,376 | 32 |
+| TiMER | 672 | 832 | 608 | 32 |
 
 ## Known-answer tests
 
@@ -147,3 +137,13 @@ KPQC_CPPFLAGS=-DKPQC_TEST_ENTROPY \
 
 The deterministic entropy interface used by these tests is excluded from
 normal package builds.
+
+## Security
+
+The native cores are compiled from the upstream algorithm implementations.
+This package has not received an independent security audit and does not
+provide a constant-time execution guarantee. Assess those constraints before
+using it with sensitive production keys.
+
+Third-party licenses and attributions are listed in
+[THIRD_PARTY_NOTICES.md](https://github.com/KpqC/kpqc-r/blob/main/THIRD_PARTY_NOTICES.md).
