@@ -3,6 +3,9 @@
 KpqC provides synchronous R APIs for the AIMer and HAETAE signature schemes
 and the NTRU+ and SMAUG-T key encapsulation mechanisms (KEMs).
 
+This R package is independently maintained and is not an official
+distribution from the algorithm authors.
+
 ## Runtime support
 
 - R 3.6 or newer
