@@ -98,4 +98,6 @@ SEXP kpqc_kat_drbg_clear(void) {
     secure_zero(&drbg, sizeof(drbg));
     return R_NilValue;
 }
+#else
+typedef int kpqc_kat_disabled_translation_unit;
 #endif
