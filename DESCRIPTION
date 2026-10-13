@@ -2,14 +2,9 @@ Package: kpqc
 Type: Package
 Title: Korean Post-Quantum Cryptography Algorithms
 Version: 0.1.0
-Authors@R: c(
-    person("O.", "Suolfou", email = "osuolfou@gmail.com", role = c("aut", "cre")),
-    person("SAMSUNG SDS", role = c("ctb", "cph")),
-    person("Team HAETAE", role = c("ctb", "cph")),
-    person("NTRU+ TEAM", role = c("ctb", "cph")),
-    person("Team SMAUG-T", role = c("ctb", "cph")),
-    person("Thomas", "Pornin", role = c("ctb", "cph"))
-  )
+Authors@R: person("O.", "Suolfou", email = "osuolfou@gmail.com",
+    role = c("aut", "cre"))
+Copyright: see file COPYRIGHTS
 Description: Synchronous interfaces to the AIMer and HAETAE signature
     schemes and the NTRU+ and SMAUG-T key encapsulation mechanisms (KEMs)
     selected by the Korean Post-Quantum Cryptography competition. Native

@@ -1,0 +1,12 @@
+The kpqc package integration code is Copyright (c) 2026 O. Suolfou.
+
+The bundled upstream implementations are held by their respective copyright
+holders:
+
+- AIMer: Copyright (c) 2022-2026 SAMSUNG SDS
+- HAETAE: Copyright (c) 2026 Team HAETAE
+- NTRU+: Copyright (c) 2024-2026 NTRU+ TEAM
+- SMAUG-T: Copyright (c) 2026 Team SMAUG-T
+
+Source revisions and license locations are documented in
+THIRD_PARTY_NOTICES.md.
