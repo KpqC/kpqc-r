@@ -2,14 +2,17 @@ Package: kpqc
 Type: Package
 Title: Korean Post-Quantum Cryptography Algorithms
 Version: 0.1.0
-Authors@R: person("O.", "Suolfou", email = "osuolfou@gmail.com",
+Authors@R: person("Owen", "Suolfou", email = "osuolfou@gmail.com",
     role = c("aut", "cre"))
 Copyright: see file COPYRIGHTS
-Description: Synchronous interfaces to the AIMer and HAETAE signature
-    schemes and the NTRU+ and SMAUG-T key encapsulation mechanisms (KEMs)
-    selected by the Korean Post-Quantum Cryptography competition. Native
-    reference implementations are compiled into the package and use
-    operating-system entropy for key generation, signing, and encapsulation.
+Description: Provides synchronous interfaces to four algorithms for
+    post-quantum cryptography: 'AIMer', a digital-signature algorithm based
+    on symmetric primitives; 'HAETAE', a module-lattice-based
+    digital-signature algorithm; and 'NTRU+' and 'SMAUG-T', lattice-based
+    key-encapsulation algorithms. These algorithms were selected by the
+    Korean Post-Quantum Cryptography competition. Native reference
+    implementations are compiled into the package and use operating-system
+    entropy for key generation, signing, and encapsulation.
 License: MIT + file LICENSE
 URL: https://github.com/KpqC/kpqc-r
 BugReports: https://github.com/KpqC/kpqc-r/issues
