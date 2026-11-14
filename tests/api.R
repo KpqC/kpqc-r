@@ -22,7 +22,7 @@ stopifnot(all(vapply(signatures, inherits, logical(1), "kpqc_algorithm")))
 stopifnot(all(vapply(kems, inherits, logical(1), "kpqc_algorithm")))
 
 message <- charToRaw("release-manifest:v3")
-context <- charToRaw("kpqc-r-tests")
+context <- charToRaw("test-suite")
 
 for (algorithm in signatures) {
   keys <- generate_key_pair(algorithm)
