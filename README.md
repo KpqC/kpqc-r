@@ -83,9 +83,10 @@ stopifnot(identical(inbound_secret, outbound$shared_secret))
 ## Data and failures
 
 Keys, signatures, ciphertexts, messages, contexts, and shared secrets are raw
-vectors. Fixed-size inputs are checked before native code is called. Invalid
-signatures return `FALSE`; invalid sizes, unsupported operations, and native
-failures raise R errors.
+vectors. Incorrect key or ciphertext lengths, contexts longer than 255 bytes,
+unsupported operations, and native failures raise R errors. Signature
+verification returns `FALSE` for invalid signatures, including signatures of
+the wrong length.
 
 NTRU+ rejects non-canonical public keys and invalid ciphertexts with an error.
 SMAUG-T uses implicit rejection: an invalid ciphertext returns a replacement
